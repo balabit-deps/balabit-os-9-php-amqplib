@@ -1,0 +1,36 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <david@tilapin.org>
+Date: Sun, 10 Mar 2019 17:32:03 -1000
+Subject: Use homemade autoload.php
+
+Work around the lack of proper autoload.php from Composer
+
+Forwarded: not-needed
+---
+ demo/basic_return.php | 2 +-
+ demo/config.php       | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/demo/basic_return.php b/demo/basic_return.php
+index 89283e9..5ea7e33 100644
+--- a/demo/basic_return.php
++++ b/demo/basic_return.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-require_once __DIR__ . '/../vendor/autoload.php';
++require_once 'PhpAmqpLib/autoload.php';
+ 
+ use PhpAmqpLib\Connection\AMQPStreamConnection;
+ use PhpAmqpLib\Exchange\AMQPExchangeType;
+diff --git a/demo/config.php b/demo/config.php
+index 331f98e..659f37a 100644
+--- a/demo/config.php
++++ b/demo/config.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-require_once __DIR__ . '/../vendor/autoload.php';
++require_once 'PhpAmqpLib/autoload.php';
+ 
+ putenv('TEST_AMQP_DEBUG=1');
+ require_once __DIR__ . '/../tests/config.php';

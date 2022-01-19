@@ -1,0 +1,441 @@
+php-amqplib (3.1.2-1) unstable; urgency=medium
+
+  [ Ramūnas Dronga ]
+  * version bump
+
+ -- David Prévot <taffit@debian.org>  Wed, 19 Jan 2022 06:04:52 -0400
+
+php-amqplib (3.1.1-1) unstable; urgency=medium
+
+  [ Ramūnas Dronga ]
+  * fix compatibility with upcomming PHPUnit versions
+  * fix deprecation notice from stream_select() on PHP8.1
+
+ -- David Prévot <taffit@debian.org>  Mon, 13 Dec 2021 19:06:56 -0400
+
+php-amqplib (3.1.0-2) unstable; urgency=medium
+
+  * Upload to unstable in sync with php-monolog 2
+  * Update standards version to 4.6.0, no changes needed.
+
+ -- David Prévot <taffit@debian.org>  Wed, 24 Nov 2021 12:44:37 -0400
+
+php-amqplib (3.1.0-1) experimental; urgency=medium
+
+  [ Ramūnas Dronga ]
+  * revert workflow changes, lock rabbitmq image to version 3.8.9
+  * 3.1.0 changelog
+
+  [ javer ]
+  * Add PHP 8.1 support
+
+  [ David Prévot ]
+  * Fix autoloaders path
+  * Don’t check missing signature on upstream tag
+  * Use TLS v1.3 for tests
+
+ -- David Prévot <taffit@debian.org>  Sat, 23 Oct 2021 07:07:19 -0400
+
+php-amqplib (3.0.0-1) experimental; urgency=medium
+
+  [ Luke Bakken ]
+  * 3.0.0 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Thu, 18 Mar 2021 07:25:47 -0400
+
+php-amqplib (3.0.0~rc2-1) experimental; urgency=medium
+
+  [ Alexey Manukhin ]
+  * add support PHP8.0 (Closes: #977396)
+
+  [ Luke Bakken ]
+  * 3.0.0 CHANGELOG
+  * 3.0.0-rc2
+
+  [ David Prévot ]
+  * Revert "Drop signature check"
+  * Exclude compat files for phpab
+
+ -- David Prévot <taffit@debian.org>  Tue, 09 Mar 2021 15:38:01 -0400
+
+php-amqplib (2.12.3-1) experimental; urgency=medium
+
+  [ Ramūnas Dronga ]
+  * replace conditional phpseclib aliases with defined classes,
+    support autoloader class maps
+
+  [ David Prévot ]
+  * Drop signature check
+  * Generate phpab templates at build time
+
+ -- David Prévot <taffit@debian.org>  Mon, 01 Mar 2021 18:23:20 -0400
+
+php-amqplib (2.12.2-1) experimental; urgency=medium
+
+  * Upload to experimental to respect the freeze
+
+  [ Ramūnas Dronga ]
+  * add support for next major version of phpseclib
+
+  [ Luke Bakken ]
+  * 2.12.2 CHANGELOG
+
+  [ David Prévot ]
+  * Simplify gbp import-orig (and check signature)
+  * Use dh-sequence-phpcomposer instead of pkg-php-tools
+  * Use php-phpseclib3
+  * Install /u/s/p/autoloaders file
+
+ -- David Prévot <taffit@debian.org>  Sat, 13 Feb 2021 09:05:25 -0400
+
+php-amqplib (2.12.1-3) unstable; urgency=medium
+
+  * Adapt to recent version of PHPUnit (9)
+  * Update Standards-Version to 4.5.1
+  * Update watch file format version to 4.
+
+ -- David Prévot <taffit@debian.org>  Mon, 14 Dec 2020 13:07:23 -0400
+
+php-amqplib (2.12.1-2) unstable; urgency=medium
+
+  * Ensure that a testsuite failure makes the package FTBFS
+  * Revert "Don’t start already running rabbit server for CI"
+  * Use another port for CI since rabbitmq-server is already up and running
+  * Use SSL for tests (Closes: #971828)
+  * Properly wait on rabbitmq to start
+
+ -- David Prévot <taffit@debian.org>  Sun, 11 Oct 2020 10:19:33 -0400
+
+php-amqplib (2.12.1-1) unstable; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.12.1 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Sun, 27 Sep 2020 09:57:40 -0400
+
+php-amqplib (2.12.0-1) unstable; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.12.0 CHANGELOG
+
+  [ David Prévot ]
+  * Set Rules-Requires-Root: no.
+  * Rename main branch to debian/latest (DEP-14)
+
+ -- David Prévot <taffit@debian.org>  Wed, 02 Sep 2020 18:14:25 -0400
+
+php-amqplib (2.11.3-1) unstable; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.11.3 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Wed, 27 May 2020 06:26:42 -1000
+
+php-amqplib (2.11.2-1) unstable; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.11.2 CHANGELOG
+
+  [ David Prévot ]
+  * Use debhelper-compat 13
+  * Simplify override_dh_auto_test
+
+ -- David Prévot <taffit@debian.org>  Mon, 04 May 2020 22:44:34 -1000
+
+php-amqplib (2.11.1-1) unstable; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.11.1 CHANGELOG
+
+  [ David Prévot ]
+  * Set upstream metadata fields:
+    Bug-Database, Bug-Submit, Repository, Repository-Browse.
+  * Update Standards-Version to 4.5.0
+  * Drop use of unhandled “v1 - v2“ version by pkg-php-tools
+
+ -- David Prévot <taffit@debian.org>  Fri, 28 Feb 2020 09:25:58 -1000
+
+php-amqplib (2.11.0-2) unstable; urgency=medium
+
+  * Use php-httpful for tests
+
+ -- David Prévot <taffit@debian.org>  Mon, 09 Dec 2019 10:05:29 -1000
+
+php-amqplib (2.11.0-1) unstable; urgency=medium
+
+  [ Ramūnas Dronga ]
+  * remove bcmath dependency, fallback to BigInteger if necessary
+
+  [ Luke Bakken ]
+  * 2.11.0 CHANGELOG
+
+  [ David Prévot ]
+  * Update packaging to new php-phpseclib (build-)dependency
+
+ -- David Prévot <taffit@debian.org>  Tue, 19 Nov 2019 18:39:19 -1000
+
+php-amqplib (2.10.1-1) unstable; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.10.1 CHANGELOG
+
+  [ David Prévot ]
+  * Set upstream metadata fields: Repository.
+  * Remove obsolete fields Name, Contact from debian/upstream/metadata.
+  * Drop versioned dependency satisfied in (old)stable
+  * Update Standards-Version to 4.4.1
+  * Don’t start already running rabbit server for CI
+
+ -- David Prévot <taffit@debian.org>  Sat, 19 Oct 2019 05:31:27 -1000
+
+php-amqplib (2.10.0-2) unstable; urgency=medium
+
+  * Add some bits needed for CI
+
+ -- David Prévot <taffit@debian.org>  Fri, 16 Aug 2019 07:14:16 -1000
+
+php-amqplib (2.10.0-1) unstable; urgency=medium
+
+  * Upload to unstable now that buster has been released
+
+ -- David Prévot <taffit@debian.org>  Thu, 15 Aug 2019 22:22:28 -1000
+
+php-amqplib (2.10.0~rc1-1) experimental; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.10.0 API docs
+
+  [ David Prévot ]
+  * Compatibility with recent PHPUnit (8)
+  * Update standards version, no changes needed.
+  * Set upstream metadata fields: Contact, Name.
+
+ -- David Prévot <taffit@debian.org>  Thu, 08 Aug 2019 08:30:10 -1000
+
+php-amqplib (2.9.2-1) experimental; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.9.2 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Sun, 28 Apr 2019 14:33:11 -1000
+
+php-amqplib (2.9.1-1) experimental; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.9.1 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Thu, 28 Mar 2019 07:09:46 -1000
+
+php-amqplib (2.9.0-1) experimental; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.9.0 CHANGELOG
+
+  [ David Prévot ]
+  * Document gbp import-ref usage
+
+ -- David Prévot <taffit@debian.org>  Sat, 23 Mar 2019 10:53:24 -1000
+
+php-amqplib (2.9.0~rc2-1) experimental; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.9.0 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Wed, 20 Mar 2019 22:42:40 -1000
+
+php-amqplib (2.9.0~rc1-1) experimental; urgency=medium
+
+  [ Luke Bakken ]
+  * Enable heartbeats by default
+
+  [ David Prévot ]
+  * Use upstream git tag as source
+  * Adapt packaging to restored tests and examples
+  * Adapt to recent PHPUnit
+  * Use debhelper-compat 12
+  * Update Standards-Version to 4.3.0
+
+ -- David Prévot <taffit@debian.org>  Sat, 09 Mar 2019 18:36:02 -1000
+
+php-amqplib (2.8.2~rc3-1) experimental; urgency=medium
+
+  [ mszabo-wikia ]
+  * Allow one to specify a timeout for channel operations
+
+ -- David Prévot <taffit@debian.org>  Wed, 12 Dec 2018 15:39:09 -1000
+
+php-amqplib (2.8.2~rc1-1) experimental; urgency=medium
+
+  * Upload RC to experimental
+  * Drop useless Breaks and Replaces
+
+ -- David Prévot <taffit@debian.org>  Sun, 09 Dec 2018 06:44:48 -1000
+
+php-amqplib (2.8.1-1) unstable; urgency=medium
+
+  * Upload stable release to unstable
+
+  [ Luke Bakken ]
+  * v2.8.1 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Wed, 14 Nov 2018 13:38:41 -1000
+
+php-amqplib (2.8.1~rc3-1) experimental; urgency=medium
+
+  * Upload RC to experimental
+
+  [ Luke Bakken ]
+  * Move ext-sockets from "suggest" to "require"
+  * v2.8.1-rc3 CHANGELOG
+
+ -- David Prévot <taffit@debian.org>  Sat, 10 Nov 2018 09:19:57 +1300
+
+php-amqplib (2.8.0-1) unstable; urgency=medium
+
+  * Upload stable release to unstable
+
+  [ Luke Bakken ]
+  * 2.8.0 changelog update
+
+ -- David Prévot <taffit@debian.org>  Tue, 23 Oct 2018 18:30:32 -1000
+
+php-amqplib (2.8.0~rc1-1) experimental; urgency=medium
+
+  * Upload RC to experimentald
+
+  [ Luke Bakken ]
+  * Update minimum PHP version to 5.4.0 or greater, remove mbstring requirement
+  * v2.8.0-rc1
+
+ -- David Prévot <taffit@debian.org>  Mon, 15 Oct 2018 21:21:46 -1000
+
+php-amqplib (2.7.3-1) unstable; urgency=medium
+
+  [ Indra Kurniawan ]
+  * Translate ErrorException to AMQPRuntimeException
+
+  [ David Prévot ]
+  * Use debhelper-compat 11
+  * Drop get-orig-source target
+  * Use https in Format
+  * Use Standards-Version 4.2.1
+
+ -- David Prévot <taffit@debian.org>  Mon, 15 Oct 2018 19:05:50 -1000
+
+php-amqplib (2.7.2-1) unstable; urgency=medium
+
+  [ Luke Bakken ]
+  * 2.7.2 CHANGELOG
+
+  [ David Prévot ]
+  * Move project repository to salsa.d.o
+  * Update Standards-Version to 4.1.3
+
+ -- David Prévot <taffit@debian.org>  Wed, 07 Mar 2018 15:12:05 -1000
+
+php-amqplib (2.7.0-1) unstable; urgency=medium
+
+  * Update Standards-Version to 4.1.1
+
+ -- David Prévot <taffit@debian.org>  Thu, 12 Oct 2017 08:22:17 -1000
+
+php-amqplib (2.6.3-1) unstable; urgency=medium
+
+  [ Todoshchenko Andrey ]
+  * float timeout for socket
+  * float timeout for stream
+
+  [ John Kelly ]
+  * Verify read_write_timeout is at least 2x the heartbeat (if set)
+  * Fix issue with declaring an exchange with a closed connection
+  * Update phpdocs
+
+  [ Giulio Calore ]
+  * catch the ErrorException thrown by the custom error handler in all the
+    places we are using it, to restore the previous error handler
+
+  [ David Prévot ]
+  * Update Standards-Version to 3.9.8
+
+ -- David Prévot <taffit@debian.org>  Fri, 15 Apr 2016 09:49:36 -0400
+
+php-amqplib (2.6.2-1) unstable; urgency=medium
+
+  [ Bruno Escudeiro ]
+  * Disable heartbeat when closing connection
+
+  [ Alex Salt ]
+  * AMQPReader::wait() throw IOWaitException on stream_select failure
+
+  [ John Kelly ]
+  * Update changelog
+
+  [ Alex Vasilenko ]
+  * yet another lazy connection
+
+  [ David Prévot ]
+  * Build with recent pkg-php-tools for the PHP 7.0 transition
+
+ -- David Prévot <taffit@debian.org>  Wed, 09 Mar 2016 17:58:50 -0400
+
+php-amqplib (2.6.1-1) unstable; urgency=medium
+
+  [ John Kelly ]
+  * The start of a changelog
+  * Make changes for new maintainers and package
+  * Add replaces to composer
+
+  [ David Prévot ]
+  * Adapt to new php-amqplib namespace
+  * Ship README.md now back
+  * Update Standards-Version to 3.9.7
+
+ -- David Prévot <taffit@debian.org>  Sat, 13 Feb 2016 13:03:25 -0400
+
+php-amqplib (2.6.0-1) unstable; urgency=medium
+
+  [ Jon Dufresne ]
+  * Add .gitattributes to slim down composer packages.
+
+  [ David Prévot ]
+  * Adapt packaging to removed tests and documentation
+
+ -- David Prévot <taffit@debian.org>  Fri, 23 Oct 2015 16:19:48 -0400
+
+php-amqplib (2.5.2-1) unstable; urgency=medium
+
+  [ Alvaro Videla ]
+  * adds basiq_qos example
+
+ -- David Prévot <taffit@debian.org>  Sat, 29 Aug 2015 14:14:11 -0400
+
+php-amqplib (2.5.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- David Prévot <taffit@debian.org>  Tue, 16 Jun 2015 10:06:08 -0400
+
+php-amqplib (2.5.0-2) unstable; urgency=medium
+
+  * Upload to unstable since Jessie has been released
+
+ -- David Prévot <taffit@debian.org>  Fri, 15 May 2015 11:00:37 -0400
+
+php-amqplib (2.5.0-1) experimental; urgency=medium
+
+  * Upload to experimental to respect the freeze
+  * Provide homemade autoload.php
+
+ -- David Prévot <taffit@debian.org>  Tue, 24 Feb 2015 19:28:28 -0400
+
+php-amqplib (2.4.1-1) unstable; urgency=medium
+
+  * Refresh patches
+
+ -- David Prévot <taffit@debian.org>  Fri, 24 Oct 2014 09:48:45 -0400
+
+php-amqplib (2.4.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #763828)
+
+ -- David Prévot <taffit@debian.org>  Thu, 02 Oct 2014 21:11:12 -0400

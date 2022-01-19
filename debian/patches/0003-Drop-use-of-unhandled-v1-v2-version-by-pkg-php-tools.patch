@@ -1,0 +1,23 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <david@tilapin.org>
+Date: Fri, 28 Feb 2020 09:37:27 -1000
+Subject: =?utf-8?q?Drop_use_of_unhandled_=E2=80=9Cv1_-_v2=E2=80=9C_version_?=
+ =?utf-8?q?by_pkg-php-tools?=
+
+---
+ composer.json | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/composer.json b/composer.json
+index 19ee982..61d660a 100644
+--- a/composer.json
++++ b/composer.json
+@@ -40,9 +40,6 @@
+         "squizlabs/php_codesniffer": "^3.6",
+         "nategood/httpful": "^0.2.20"
+     },
+-    "conflict": {
+-        "php": "7.4.0 - 7.4.1"
+-    },
+     "autoload": {
+         "psr-4": {
+             "PhpAmqpLib\\": "PhpAmqpLib/"

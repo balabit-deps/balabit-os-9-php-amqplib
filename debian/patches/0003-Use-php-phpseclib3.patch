@@ -1,0 +1,22 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <david@tilapin.org>
+Date: Sat, 13 Feb 2021 09:01:04 -0400
+Subject: Use php-phpseclib3
+
+Forwarded: not-needed
+---
+ composer.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/composer.json b/composer.json
+index 61d660a..ec30551 100644
+--- a/composer.json
++++ b/composer.json
+@@ -32,7 +32,7 @@
+         "php": "^7.1||^8.0",
+         "ext-sockets": "*",
+         "ext-mbstring": "*",
+-        "phpseclib/phpseclib": "^2.0|^3.0"
++        "phpseclib/phpseclib": "^3.0"
+     },
+     "require-dev": {
+         "ext-curl": "*",

@@ -1,0 +1,21 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <david@tilapin.org>
+Date: Sat, 23 Oct 2021 07:33:34 -0400
+Subject: Use TLS v1.3
+
+---
+ tests/Functional/Connection/SSLConnectionTest.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/Functional/Connection/SSLConnectionTest.php b/tests/Functional/Connection/SSLConnectionTest.php
+index dfbd1ec..c3e4d69 100644
+--- a/tests/Functional/Connection/SSLConnectionTest.php
++++ b/tests/Functional/Connection/SSLConnectionTest.php
+@@ -46,7 +46,7 @@ class SSLConnectionTest extends AbstractConnectionTest
+         ];
+ 
+         // #1 TLS protocol
+-        $options['protocol'] = 'tlsv1.2';
++        $options['protocol'] = 'tlsv1.3';
+         $sets[] = [$options];
+ 
+         // #2 SNI_enabled

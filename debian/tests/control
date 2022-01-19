@@ -1,0 +1,8 @@
+Tests: phpunit
+Restrictions: allow-stderr, rw-build-tree
+Depends: php-httpful,
+         phpab,
+         phpunit,
+         pkg-php-tools (>= 1.41~),
+         rabbitmq-server,
+         @

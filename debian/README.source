@@ -1,0 +1,5 @@
+Starting with 2.9.0~rc1, we are merging the signed upstream tags as
+upstream, instead of using the tarball that doesn’t ship tests.
+
+# Example to import the latest upstream version
+gbp import-orig --uscan

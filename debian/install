@@ -1,0 +1,2 @@
+PhpAmqpLib		usr/share/php
+debian/autoloaders	usr/share/pkg-php-tools

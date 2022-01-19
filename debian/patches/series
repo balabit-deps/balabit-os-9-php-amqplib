@@ -1,0 +1,4 @@
+0001-Use-homemade-autoload.php.patch
+0003-Drop-use-of-unhandled-v1-v2-version-by-pkg-php-tools.patch
+0003-Use-php-phpseclib3.patch
+0004-Use-TLS-v1.3.patch
